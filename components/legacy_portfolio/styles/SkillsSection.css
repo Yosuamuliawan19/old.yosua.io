@@ -78,7 +78,7 @@
 	width: 40%;
 	height: 48px;
 	color: black;
-
+	
 
 }
 .skills-section-desc-right {
@@ -91,7 +91,7 @@
 	
 }
 
-.skills-section-desc-left >div{
+.skills-section-desc-left > div{
 	width: fit-content;
 	padding: 12px 24px !important;	
 	display: flex;

@@ -9,7 +9,7 @@ class Sidebar extends Component {
 					<div className='tooltip'>
 						<img
 							className='sidebar-logo'
-							src={require('../assets/instagram.png')}
+							src={require('./assets/instagram.png')}
 							onClick={(_) =>
 								window.open(
 									'https://www.instagram.com/yosuamuliawan/?hl=en',
@@ -22,7 +22,7 @@ class Sidebar extends Component {
 					<div className='tooltip'>
 						<img
 							className='sidebar-logo'
-							src={require('../assets/medium.png')}
+							src={require('./assets/medium.png')}
 							onClick={(_) =>
 								window.open('https://yosuamuliawan.medium.com/', '_blank')
 							}
@@ -32,7 +32,7 @@ class Sidebar extends Component {
 					<div className='tooltip'>
 						<img
 							className='sidebar-logo'
-							src={require('../assets/github.svg')}
+							src={require('./assets/github.svg')}
 							onClick={(_) =>
 								window.open('https://github.com/Yosuamuliawan19', '_blank')
 							}
@@ -43,7 +43,7 @@ class Sidebar extends Component {
 					<div className='tooltip'>
 						<img
 							className='sidebar-logo'
-							src={require('../assets/linkedin.png')}
+							src={require('./assets/linkedin.png')}
 							onClick={(_) => window.open('https://www.linkedin.com/in/yosua-muliawan/?originalSubdomain=sg', '_blank')}
 						/>
 						<span class='tooltiptext apple-blue'>Linkedin</span>

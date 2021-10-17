@@ -42,15 +42,20 @@ class SkilsCarousel extends Component {
 				<div className='skills-section-desc'>
 					{this.state.animate ? (
 						<div className={`skills-section-desc-left  fadeInDown`}>
-							<div className={` ${this.state.col1[this.state.i1]}`}>{this.state.c1[this.state.i1]}</div>
+							<div className={` ${this.state.col1[this.state.i1]}`}>
+							<strong>{this.state.c1[this.state.i1]}</strong>	
+								</div>
 						</div>
 					) : (
 						<div className='skills-section-desc-left'></div>
 					)}
-					<div className='skills-section-desc-center fc'> using </div>
+					<strong className='skills-section-desc-center fc'> using </strong>
 					{this.state.animate ? (
 						<div className={`skills-section-desc-right fadeInUp`}>
-							<div className={` ${this.state.col1[this.state.i1]}`}>{this.state.c2[this.state.i2]}</div>
+							<div className={` ${this.state.col1[this.state.i1]}`}>
+							<strong>{this.state.c2[this.state.i2]}
+							</strong>
+							</div>
 						</div>
 					) : (
 						<div className='skills-section-desc-right fc'></div>

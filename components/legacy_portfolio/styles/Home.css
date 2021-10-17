@@ -34,7 +34,7 @@ a {
 }
 .home-header-name {
 	font-weight: bold;
-	font-size: 68px;
+	font-size: 48px;
 	max-width: 360px;
 	color: black;
 	animation-delay: 0.5s;
@@ -286,4 +286,15 @@ a{
 .home-projects-container {
 	height: 100vh;
 	/*background-color: black;*/
+}
+
+
+.glass{
+	background-color: rgba(255,255,255,.5);
+	backdrop-filter: saturate(140%) blur(20px);
+}
+
+.glass-dark{
+	background-color: rgba(0,0,0,.5) !important;
+	backdrop-filter: saturate(140%) blur(20px);
 }

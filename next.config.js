@@ -9,6 +9,9 @@ module.exports = withBundleAnalyzer({
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     ignoreDuringBuilds: true,
   },
+  images: {
+    disableStaticImages: true
+  },
   experimental: { esmExternals: true },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({

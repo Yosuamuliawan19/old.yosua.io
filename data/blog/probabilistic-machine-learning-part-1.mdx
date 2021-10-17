@@ -1,0 +1,99 @@
+---
+title: 'Probabilistic Machine Learning — Part 1: Overview'
+date: '2020-11-11'
+tags: ['ML/AI', 'Mathematics']
+draft: false
+summary: 'In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component.'
+authors: ['default']
+layout: PostSimple
+
+---
+
+
+Much of today’s machine learning landscape relies on neural-network-based architectures. These models offer much in terms of their flexibility for adaption to many real-world tasks.
+
+However, their ‘black box’ nature offers little insights into how decisions are being made and their interpretability. Hence, in this article, we will go through another popular class of estimators — **probabilistic models**, which allows us to interpret and embed knowledge and decision-making principles into the model's architectures. This article will be the first of a series of articles, covering the top of probabilistic machine learning.
+
+### Basic notations and principles
+There are 3 elements of a probability space
+1. Outcome/ sample space (denoted by Ω) — this represents the set of Ω all possible outcomes of an experiment
+2. Event space (denoted by E) — represents the set of all events we would like to consider, which is a subset of Ω
+3. Probability function, which assigns probabilities to the events in E
+With these elements as a basis, a real-world problem is often broken down into one or more random variables, which are
+
+Why do we need random variables?
+
+Answer: because not all events can be represented by real numbers, e.g. coin flip
+
+These random variables can be either discrete or continuous. The graphs below demonstrate the differences between the two.
+
+Basic operations
+### Sum rule
+The probability of a random variable x is the sum of x over all of the possibilities of y. This is illustrated in the equations below.
+
+This process is also often called marginalization, or getting p(x) by integrating over all p(y)
+
+### Product rule
+The joint probability (the probability of happening together) of x and y is the product of the probability of x given y, multiplied by the probability of y.
+
+
+
+Condiitonal probability
+What is conditional probability?
+When one variable is dependent on another, its probability is ‘conditional’ to another variable. For instance, the probability of X is conditional to Y, if the observed value of Y influences the probability of X
+`p(x|Y = y¹) = p(x,y)/ p(y)`
+
+When x and y are independent, the joint probability of x and y becomes. `p(x,y) = p(x)p(y):`
+Bayes Rule and its 4 components
+
+There are 4 main components of the Bayes rule. These components are just conventions used to help us easily refer to the parts of the Bayes equation when discussing models and theories. Often, these parts serve as atomic building blocks of models.
+Four rules of expectation
+
+The expected value, as the name implies, is the average value a probability distribution will output. Alternatively, it can be viewed as a measure of the centrality of a probability distribution. It is obtained by multiplying the value of each possible outcome with the likelihood of the outcome. There are four main rules of the expected value that will come in handy in probabilistic machine learning.
+Expected value of constant is the constant
+```
+E[constant * function] = constant * E[function]
+E[f(x) + g(x)] = E[f(x)] + E[g(x)]
+E[f(x) * g(y)] = E[f(x)] * E[g(y)], if x and y is independent
+```
+
+### Common probability distributions, and their use cases
+
+Real-world tasks are often presented with different constraints and requirements; 
+predicting the weather tommorown has different requirements from predicting the outcome of a six-faced die. 
+Hence we employ different types of probability distribution functions (recall that this is one of the 3 components of the probability space)
+
+#### 1. Good old Bernoulli distribution
+
+Parameterized by: probability p of an event happening, or not happening
+
+Example use cases: Models boolean events, e.g. whether it's going to rain or not tomorrow
+
+#### 2. Gaussian distribution
+
+Parameterized by: Mean u and variance σ
+
+Example use cases: Modelling the average height of a population.
+
+#### 3. Binomial distribution
+
+Parameterized by: Independent, consecutive trials of Beta Trials
+
+Example use cases: Prediction of number of wins by a sports team in a season
+
+..and many more interesting distributions: Poisson, Exponential, Gamma
+
+### Summary
+Congratulations, you have made it to the end of this article. Hope you enjoyed the journey. In summary, you have learned:
+1. Basic notation and parameterization of probability
+2. Basic operations
+3. Different types of probability distributions
+
+You might probably wonder, what is next in store? how does it all connect to probabilistic machine learning? Do not worry, in the next article, we will get into the nitty-gritty by learning basic probabilistic ML models.
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 ---
-name: Tails Azimuth
+name: Yosua Muliawan
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
+occupation: Its me
 company: Stanford University
-email: address@yoursite.com
+email: yosuamuliawan19@gmail.com
 twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com
 github: https://github.com

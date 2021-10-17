@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         primary: colors.green,
-        gray: colors.trueGray,
+        gray: colors.gray,
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -52,13 +52,13 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             code: {
-              color: theme('colors.pink.500'),
-              backgroundColor: theme('colors.gray.100'),
+              color: theme('colors.primary.500'),
+              backgroundColor: theme('colors.primary.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
               paddingBottom: '2px',
-              borderRadius: '0.25rem',
+              borderRadius: '4px',
             },
             'code:before': {
               content: 'none',

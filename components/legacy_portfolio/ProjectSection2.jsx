@@ -47,7 +47,7 @@ class ProjectSection2 extends Component {
 				{projects.map((data) => {
 					console.log(data.priority);
 					return (
-						<div key={data.id} className='project-section-2-project-container'>
+						<div key={data.id} className='project-section-2-project-container '>
 							<div className='project-section-2-project-image-container'>
 								<LazyLoad debounce={false} throttle={10}>
 									<ImageLoader
@@ -62,19 +62,19 @@ class ProjectSection2 extends Component {
 
 							<div className='project-section-2-info-container'>
 								<div
-									className='project-section-2-project-title'
+									className='project-section-2-project-title dark:text-white'
 									onClick={(_) => window.open(data.url, '_blank')}
 								>
 									{data.title}
 								</div>
-								<span className='project-section-2-project-sub'>
+								<span className='project-section-2-project-sub dark:text-white'>
 									{data.subtitle}
 									{/* <strong>
 									ReactJs, Flask, NodeJs
 									</strong> */}
 								</span>
 
-								<div className='project-section-2-project-desc'>
+								<div className='project-section-2-project-desc dark:text-white'>
 									{data.description}
 								</div>
 								<button

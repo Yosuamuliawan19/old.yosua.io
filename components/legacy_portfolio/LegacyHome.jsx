@@ -12,10 +12,10 @@ class Home extends Component {
 				<div className='alt-bg' />
 				<div className='home-header-container alt-bg'>
 					<div className='home-header-top-container'>
-						<div className='home-header-name text-pop-up-top'> Hi there ! </div>
+						<div className='home-header-name text-pop-up-top dark:text-white'> Hi there ! </div>
 						{/* <div className='home-header-name text-pop-up-top'> Muliawan </div> */}
 						<div className='home-header-user-name text-pop-up-top'><a href="https://github.com/Yosuamuliawan19" target="_blank">@yosuamuliawan19</a></div>
-						<div className='home-header-position fadeInUp'>
+						<div className='home-header-position fadeInUp dark:text-white'>
 							<div style={{marginRight: 6}}>💻 Software Engineer<span style={{fontWeight: 'bold'}}>
 								{' '} - Shopee (SG)
 							</span></div>
@@ -27,7 +27,7 @@ class Home extends Component {
 							
 							
 						</div>
-						<div className='home-header-position fadeInUp'>
+						<div className='home-header-position fadeInUp dark:text-white'>
 							<div  style={{marginRight: 6}}>🎓 Graduate Student <span style={{fontWeight: 'bold'}}>
 								- National University of Singapore (NUS)
 							</span></div>
