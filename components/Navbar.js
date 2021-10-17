@@ -11,7 +11,7 @@ const Navbar = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between  border-1 border-gray-50">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex items-center justify-between py-6">
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
@@ -32,7 +32,7 @@ const Navbar = ({ children }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  className="p-1 font-bold text-gray-900 sm:p-4 dark:text-gray-100"
                 >
                   {link.title}
                 </Link>

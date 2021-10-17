@@ -12,8 +12,8 @@ class Home extends Component {
 				<div className='alt-bg' />
 				<div className='home-header-container alt-bg'>
 					<div className='home-header-top-container'>
-						<div className='home-header-name text-pop-up-top'> Yosua </div>
-						<div className='home-header-name text-pop-up-top'> Muliawan </div>
+						<div className='home-header-name text-pop-up-top'> Hi there ! </div>
+						{/* <div className='home-header-name text-pop-up-top'> Muliawan </div> */}
 						<div className='home-header-user-name text-pop-up-top'><a href="https://github.com/Yosuamuliawan19" target="_blank">@yosuamuliawan19</a></div>
 						<div className='home-header-position fadeInUp'>
 							<div style={{marginRight: 6}}>💻 Software Engineer<span style={{fontWeight: 'bold'}}>
