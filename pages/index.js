@@ -4,8 +4,9 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-
+import LegacyHome from '@/components/legacy_portfolio/LegacyHome'
 import NewsletterForm from '@/components/NewsletterForm'
+import Navbar from '@/components/Navbar'
 
 const MAX_DISPLAY = 5
 
@@ -16,6 +17,12 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  return <>
+        <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+
+  <Navbar/>
+   <LegacyHome/>
+   </>
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />

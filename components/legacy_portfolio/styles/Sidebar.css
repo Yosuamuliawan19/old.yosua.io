@@ -1,0 +1,127 @@
+.sidebar-container {
+	/*border-right: 1px solid rgba(34,18,64,.15);*/
+	width: 60px;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: none;
+}
+
+.sidebar-borders {
+	border-right: 1px solid rgba(34, 18, 64, 0.15);
+	width: 60px;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebar-logo {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.tooltip {
+	z-index: 2000;
+	position: relative;
+	display: inline-block;
+	/* background-color: rgb(247, 232, 232); */
+	/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	opacity: 0;
+	width: 120px;
+	
+	text-align: center;
+	padding: 12px 3px;
+	border-radius: 6px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	/* background-image: -webkit-linear-gradient(355deg, #14a01d, #6dcf73); */
+	/* background-color: rgb(245, 194, 194); */
+	backdrop-filter: blur(5px);
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: -2000;
+	/* top: 10px; */
+	left: 60px;
+	transition: 0.3s ease all;
+	font-weight: bold;
+}
+
+.apple-red{
+	color: rgb(226, 95, 95);
+	background-color: rgb(245, 194, 194);
+}
+
+.apple-yellow{
+	color: rgb(180, 83, 9);
+	background-color:rgb(254, 243, 199);
+}
+
+.apple-green{
+	background-color: rgba(228,241,232);
+    color: #14a01d;
+}
+
+.apple-blue{
+	background-color: rgb(200, 229, 255);
+	color: rgb(55, 140, 189);
+}
+.sidebar-tooltiptext {
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	/* visibility: visible; */
+	opacity: 1;
+	transition: 0.3s ease all;
+}
+
+@media only screen and (max-width: 1080px) {
+	.tooltip .tooltiptext {
+		top: -60px;
+		left: -35px;
+	}
+	.sidebar-container {
+		/*border-top: 1px solid rgba(34,18,64,.15);*/
+
+		bottom: 0;
+		width: 100vw;
+		height: 60px;
+
+		z-index: 300;
+		flex-direction: row;
+		background-color: none;
+	}
+	.sidebar-borders {
+		border-top: 1px solid rgba(34, 18, 64, 0.15);
+
+		bottom: 0;
+		width: 100vw;
+		height: 60px;
+
+		z-index: 300;
+		flex-direction: row;
+	}
+}
+.sidebar-borders {
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px);
+}

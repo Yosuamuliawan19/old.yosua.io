@@ -4,6 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
+import LayoutWrapper from '@/components/LayoutWrapper'
 
 export async function getStaticProps() {
   const tags = await getAllTags('blog')
@@ -14,7 +15,7 @@ export async function getStaticProps() {
 export default function Tags({ tags }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
-    <>
+    <LayoutWrapper>
       <PageSEO title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">
         <div className="pt-6 pb-8 space-x-2 md:space-y-5">
@@ -39,6 +40,6 @@ export default function Tags({ tags }) {
           })}
         </div>
       </div>
-    </>
+    </LayoutWrapper>
   )
 }

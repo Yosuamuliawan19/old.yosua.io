@@ -35,6 +35,9 @@ theme: {
 
 The primary color attribute should be assigned an object with keys from 50, 100, 200 ... 900 and the corresponding color code values.
 
+
+CS5334 - What is
+
 Tailwind includes great default color palettes that can be used for theming your own website. Check out [customizing colors documentation page](https://tailwindcss.com/docs/customizing-colors) for the full range of options.
 
 Migrating from v1? You can revert to the previous theme by setting `primary` to `colors.sky` (Tailwind 2.2.2 and above, otherwise `colors.lightBlue`) and changing gray to `colors.coolGray`.
@@ -386,3 +389,108 @@ async redirects() {
   ]
 }
 ```
+
+# Lecture 2: MLE, MAP and Bayesian Inference
+
+### MLE
+
+- What is MLE ?
+    
+    Basically, trying to guess the value of mean and variance to approximate a particular distrbution, based on data
+    
+    So the solution lies in the peak of p(x | u, o^2)
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fe37f72-406e-4354-956d-d4d7d1289855/Screenshot_2021-02-04_at_14.58.11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fe37f72-406e-4354-956d-d4d7d1289855/Screenshot_2021-02-04_at_14.58.11.png)
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c8b10f4-96c5-4cc8-b788-e2f2a6f308b8/Screenshot_2021-02-04_at_15.00.00.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c8b10f4-96c5-4cc8-b788-e2f2a6f308b8/Screenshot_2021-02-04_at_15.00.00.png)
+    
+    The formal definition of MLE is 
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f25a8939-5b14-4ab7-9276-a86af9f3e03e/Screenshot_2021-02-04_at_15.01.37.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f25a8939-5b14-4ab7-9276-a86af9f3e03e/Screenshot_2021-02-04_at_15.01.37.png)
+    
+    But, instead of maximizing the above, we typically maximize the log of it, because it is easier to work with, and the peak wont change
+    
+- What are the 5 problems with MLE ?
+    1. MLE is a point estimate (doesnt represent uncertainty or confidence in the hypothesis or solution (Bayes can do this)
+    2. MLE may overfit
+    3. MLE doesnt incorporate prior information
+    4. Always assumes the model is correct
+    5. MLE may not exist or may not be unique
+- What are 3 properties of MLE ?
+    1. Easy and fast to compute
+    2. Nice asymptotic properties
+        1. Consistent (MLE converges to true value as more data points are fed into it)
+        2. Efficient (NO other estimator has lower mean square error than the MLE estimate)
+    3. Functional invariance
+
+### MAP
+
+- What is MAP ?
+    
+    So basically, MLE is argmax p(X|theta)
+    
+    MAP is argmax p(X|theta)p(theta)
+    
+    This incorporates a prior
+    
+- What is the normal inverse gamma ?
+    
+    cv
+    
+- What are the 4 properties of MAP?
+    1. Easy and fast to compute
+    2. Incorporate prior information
+    3. Avoid overfitting (regularization
+    4. As n approaches infinity, MAP tends to look like MLE (but doesnt have the same nice asymptomtic properties
+- What are the 3 main problems with MAP
+    1. It is a point estimate (like MLE) → Poor man's Bayes LMAO
+    2. Still forced to choose a prior
+    3. It is not functionally invariant (unlike MLE)
+- MLE vs MAP
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e4b2083-eed4-4251-a2cd-ca441e74e87b/Screenshot_2021-02-04_at_20.47.36.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e4b2083-eed4-4251-a2cd-ca441e74e87b/Screenshot_2021-02-04_at_20.47.36.png)
+    
+
+### Bayesian Inference
+
+Why is Bayesian inference hard ? Because integration is hard
+
+- What is Bayesian Inference ?
+    
+    So instead of point inference, try to get all possible probability distributions
+    
+    So MAP, but u try every possible  values of parameters instead of only 1
+    
+- What are the 3 disadvantages of bayesian inference
+    1. forced to select a prior
+    2. What if your initial belief was not conjugate to the  likelihood
+    3. can be computationally intractable
+
+### Predictions using MLE, MAP, Bayesian inference
+
+### Exponential family (Always has a conjugate prior)
+
+Why is expfam nice ?
+
+- It always has a conjugate prior
+- It has a fixed number of sufficient statistics that can summarize iid data
+
+- What is an exponential family ?
+    
+    Its a set of probability distributions with a particular form
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/baee9fc4-ab84-4b5a-918d-d270111aa1bc/Screenshot_2021-02-04_at_21.34.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/baee9fc4-ab84-4b5a-918d-d270111aa1bc/Screenshot_2021-02-04_at_21.34.49.png)
+    
+    However, it is more often represented in its natural form (canonical form)
+    
+    Expfam always has a conjugate prior. When doing bayesian inference, this ensures that the posterior has the same distribition as the prior. 
+    
+    has fixed number of sufficient staatistics that summarize iid data (of arbitrary amount). So you can summarize a large amount of data using a fixed number of statistics (can be used as a layer of privacy / security as well)
+    
+    posterior predictivve distribution always has a closed form solution (provided z(theta) is closed-form)
+    
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/128a7eac-0752-4491-b2b0-08c739a519ce/Screenshot_2021-02-04_at_21.35.27.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/128a7eac-0752-4491-b2b0-08c739a519ce/Screenshot_2021-02-04_at_21.35.27.png)
+    
+- Explain the partition function
+    
+    [It serves to normalize our distribution. ](https://www.notion.so/It-serves-to-normalize-our-distribution-182b813ceec544f5897552d5801b38d5)
